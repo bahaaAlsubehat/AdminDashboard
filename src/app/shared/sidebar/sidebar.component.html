@@ -1,0 +1,122 @@
+<head>
+  <script type="text/javascript" src="jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </head>
+<body>
+<!--skipLocationChange target="_self"--> 
+<!-- partial:partials/_sidebar.html -->
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">
+        <i class="icon-grid menu-icon"></i>
+        <span class="menu-title">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+        Dashboard Salses
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+        <ul class="ul">
+          <li class="li"> <a class="nav-link" href="#">Daily Sales</a></li>
+          <li class="li"> <a class="nav-link" href="#">Monthely Sales</a></li>
+          <li class="li"> <a class="nav-link" href="#">Top Items Sales</a></li>
+        </ul>
+    </mat-expansion-panel>
+    </li>
+
+    <li class="nav-item">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+          User Manage 
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+        <ul class="ul">
+          <li class="li"><a class="nav-link" href="#">Add Admin User</a></li>
+          <li class="li"><a class="nav-link" href="#">View Admin Users</a></li>
+          <li class="li"><a class="nav-link" href="#">Filter Admin User</a></li>
+        </ul>
+    </mat-expansion-panel>
+    </li>
+    <li class="nav-item">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Ingredient Manage 
+          </mat-panel-title>
+          </mat-expansion-panel-header>
+        <ul class="ul">
+          <li class="li"><a class="nav-link" [routerLink]="['/management/addingredient']">Add Ingredient</a></li>
+          <li class="li"><a class="nav-link">Edite Ingredientr</a></li>
+          <li class="li"><a class="nav-link" [routerLink]="['/management/viewingredients']">View Ingredients</a></li>
+          <li class="li"><a class="nav-link" href="#">Filter Ingredients</a></li>
+        </ul>
+      </mat-expansion-panel>
+    </li>
+    <li class="nav-item">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Category Manage 
+          </mat-panel-title>
+          </mat-expansion-panel-header>
+        <ul class="ul">
+          <li class="li"><a class="nav-link" href="#">Add Category</a></li>
+          <li class="li"><a class="nav-link" href="#">Edite Category</a></li>
+          <li class="li"><a class="nav-link" href="#">View Category</a></li>
+          <li class="li"><a class="nav-link" href="#">Filter Category</a></li>
+        </ul>
+        </mat-expansion-panel>
+    </li>
+    <li class="nav-item">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Item Manage 
+          </mat-panel-title>
+          </mat-expansion-panel-header>
+        <ul class="ul">
+          <li class="li"><a class="nav-link" href="#">Add Item</a></li>
+          <li class="li"><a class="nav-link" href="#">Edite Item</a></li>
+          <li class="li"><a class="nav-link" href="#">View Item</a></li>
+          <li class="li"><a class="nav-link" href="#">Filter Item</a></li>
+        </ul>
+        </mat-expansion-panel>
+    </li>
+    <li class="nav-item">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Order Manage 
+          </mat-panel-title>
+          </mat-expansion-panel-header>
+        <ul class="ul">
+          <li class="li"><a class="nav-link" href="#">View Orders</a></li>
+          <li class="li"><a class="nav-link" href="#">Filter Orders</a></li>
+          <li class="li"><a class="nav-link" href="#">Cancele order</a></li>
+        </ul>
+        </mat-expansion-panel>
+    </li>
+    <li class="nav-item">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Customer Manage 
+          </mat-panel-title>
+          </mat-expansion-panel-header>
+        <ul class="ul">
+          <li class="li"><a class="nav-link" href="#">View Cutomers</a></li>
+          <li class="li"><a class="nav-link" href="#">Ban Customer</a></li>
+          <li class="li"><a class="nav-link" href="#">Filter Customer</a></li>
+        </ul>
+        </mat-expansion-panel>
+    </li>
+  </ul>
+</nav>
+<!-- partial -->
+<script src="js/jquery-1.11.3.min.js"></script>
+</body>

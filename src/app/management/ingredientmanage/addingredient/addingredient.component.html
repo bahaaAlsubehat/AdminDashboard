@@ -1,0 +1,81 @@
+<body>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "line-spin-clockwise-fade-rotating" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>    <!-- partial:partials/_navbar.html -->
+<app-navbar></app-navbar>
+<div class="container-fluid page-body-wrapper">
+      <app-sidebar></app-sidebar>
+
+      <div class="main-panel">
+       <mat-card>
+        <mat-card-content>
+            <form class="example-form">
+                <div class="div">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Ingredient Name English</mat-label>
+                        <input matInput type="text" placeholder="Ex. Meat" class="inputcss" pattern="Should br less than 50 Charachter">
+                      </mat-form-field>
+                </div>
+                <div class="div">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Ingredient Name Arabic</mat-label>
+                        <input matInput type="text" placeholder="مثال. لحم" class="inputcss">
+                      </mat-form-field>
+                </div>
+                <div class="div">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Ingredient Description English</mat-label>
+                        <input matInput type="text" placeholder="Ex. Beef Fateel Meat" class="inputcss">
+                      </mat-form-field>
+                      
+                </div>
+                <div class="div">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Ingredient Description Arabic</mat-label>
+                        <input matInput type="text" placeholder="مثال. لحم فتيل بقري" class="inputcss">
+                      </mat-form-field>
+                </div>
+                <div class="div">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Unit</mat-label>
+                        <input matInput type="text" placeholder="Ex.gm or ml" class="inputcss">
+                      </mat-form-field>
+                </div>
+                <div class="div">
+                        <input  type="file" placeholder="Ex.Url Img" class="inputcss">
+                </div>
+                <div class="div">
+                    <section class="example-section">
+                        <mat-checkbox class="example-margin">Is Active!</mat-checkbox>
+                      </section>
+                </div>
+                <div class="div">
+                  <button type="submit" mat-raised-button color="primary">Submit</button>
+                </div>
+            </form>
+        </mat-card-content>
+       </mat-card>       
+      </div>
+     </div>
+     <app-footer></app-footer>
+
+  <script src="..//src/assets/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="..//src/assets/vendors/chart.js/Chart.min.js"></script>
+  <script src="..//src/assets/vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="..//src/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="..//src/assets/js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="..//src/assets/js/off-canvas.js"></script>
+  <script src="..//src/assets/js/hoverable-collapse.js"></script>
+  <script src="..//src/assets/js/template.js"></script>
+  <script src="..//src/assets/js/settings.js"></script>
+  <script src="..//src/assets/js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="..//src/assets/js/dashboard.js"></script>
+  <script src="..//src/assets/js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+

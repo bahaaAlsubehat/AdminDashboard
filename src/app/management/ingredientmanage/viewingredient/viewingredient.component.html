@@ -1,0 +1,96 @@
+
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  </head>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "line-spin-clockwise-fade-rotating" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>    <!-- partial:partials/_navbar.html -->
+
+<app-navbar></app-navbar>
+    
+      <div class="container-fluid page-body-wrapper">
+      <app-sidebar></app-sidebar>
+      <div class="main-panel">
+        <br>
+        <h3 class="text-center">Table row expand and collapse</h3>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Details</th>
+              <th>SL</th>
+              <th>Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let row of data">
+              <tr>
+                <td>{{ row.id }}</td>
+                <td>{{ row.name }}</td>
+                <td>{{ row.email }}</td>
+                <td (click)="row.isExpand = !row.isExpand">
+                  <i *ngIf="!row.isExpand" class="bi-chevron-right"></i>
+                  <i *ngIf="row.isExpand" class="bi-chevron-up"></i>
+                </td>
+              </tr>
+              <tr *ngIf="row.isExpand">
+                <td colspan="4">
+                  <table class="table table-sm">
+                    <thead>
+                      <th>Address1</th>
+                      <th>Address2</th>
+                      <th>Address3</th>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let row2 of row.address">
+                        <td>{{ row2.add1 }}</td>
+                        <td>{{ row2.add2 }}</td>
+                        <td>{{ row2.add3 }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+
+      </div>
+      </div>
+      <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              [showFirstLastButtons]="true"
+              [pageIndex]="currentPage"
+              (page)="onPageChange($event)"
+              #paginator
+              aria-label="Select page">
+      </mat-paginator>
+      <app-footer></app-footer>
+
+  <script src="..//src/assets/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="..//src/assets/vendors/chart.js/Chart.min.js"></script>
+  <script src="..//src/assets/vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="..//src/assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="..//src/assets/js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="..//src/assets/js/off-canvas.js"></script>
+  <script src="..//src/assets/js/hoverable-collapse.js"></script>
+  <script src="..//src/assets/js/template.js"></script>
+  <script src="..//src/assets/js/settings.js"></script>
+  <script src="..//src/assets/js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="..//src/assets/js/dashboard.js"></script>
+  <script src="..//src/assets/js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+
+
+
+
+
+
+  
+  
