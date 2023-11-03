@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-addingredient',
-  templateUrl: './addingredient.component.html',
-  styleUrls: ['./addingredient.component.css']
+  selector: 'app-add-category',
+  templateUrl: './add-category.component.html',
+  styleUrls: ['./add-category.component.css']
 })
-export class AddingredientComponent {
+export class AddCategoryComponent   implements OnInit {
   constructor(private spinner: NgxSpinnerService ,private toastr: ToastrService) {}
 
   ngOnInit() {
@@ -17,7 +17,7 @@ export class AddingredientComponent {
     setTimeout(() => {
       /** spinner ends after 5 seconds */
       this.spinner.hide();
-      this.toastr.success('Management', 'Welcome in Admin Dashboard', {
+      this.toastr.success('Dashboard', 'Welcome in Admin Dashboard', {
         timeOut: 3000,
       });
     },3000);

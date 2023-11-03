@@ -3,6 +3,7 @@ import { DataSource } from '@angular/cdk/collections';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { IngredientservicesService } from '../ingredientservices.service';
 
 
 
@@ -21,13 +22,36 @@ import { MatTableDataSource } from '@angular/material/table';
   
 
 export class ViewingredientComponent implements OnInit {
- 
+ ingname: string ="";
+ ingnamear: string ="";
+ ingdescription: string ="";
+ ingdecriptionar: string ="";
+ unit: string ="";
+ imageid: number =0;
+isactive: boolean=true;
+
+constructor(private backend: IngredientservicesService){}
+
+
+
+ingdata = [{
+  'ingname' : this.ingname,
+  'ingnamear': this.ingnamear,
+  'ingdescription' : this.ingdescription,
+  'ingdecriptionar': this.ingdecriptionar,
+  'unit': this.unit,
+  'imageid': this.imageid,
+  'isactive': this.isactive
+}]
+
   data = [
     {
       id: 1,
       name: 'Abc',
       email: 'abc@mail.com',
       isExpand: false,
+      hhhhhh: 'fffff',
+      juhj: 25354,
       address: [
         {
           add1: 'Delhi',
@@ -41,6 +65,8 @@ export class ViewingredientComponent implements OnInit {
       name: 'Xyz',
       email: 'xyz@mail.com',
       isExpand: false,
+      hhhhhh: 'fffff',
+      juhj: 25354,
       address: [
         {
           add1: 'Mumbai',
@@ -55,6 +81,8 @@ export class ViewingredientComponent implements OnInit {
       name: 'ijk',
       email: 'ijk@mail.com',
       isExpand: false,
+      hhhhhh: 'fffff',
+      juhj: 25354,
       address: [
         {
           add1: 'Chennai',
@@ -69,6 +97,8 @@ export class ViewingredientComponent implements OnInit {
       name: 'def',
       email: 'def@mail.com',
       isExpand: false,
+      hhhhhh: 'fffff',
+      juhj: 25354,
       address: [
         {
           add1: 'Kolkata',
@@ -87,6 +117,9 @@ export class ViewingredientComponent implements OnInit {
 
  ngOnInit(){
   this.dataSource.paginator = this.paginator;
+  this.backend.getingredients().subscribe((resp => {
+    console.log(resp)
+  }))
 
  }
 

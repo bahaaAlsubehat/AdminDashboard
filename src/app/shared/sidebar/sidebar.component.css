@@ -1,5 +1,5 @@
 .mat-mdc-form-field + .mat-mdc-form-field {
-    margin-left: 8px;
+    margin-left: 10px;
   }
 
   /* Style the unordered list (ul) */
@@ -14,10 +14,16 @@ li {
   margin-bottom: 8px; /* Add space between list items */
   color: #333; /* Change text color */
   font-size: 16px; /* Change font size */
-  line-height: 1; /* Adjust line height */
+  line-height: .75; /* Adjust line height */
 }
 
 /* Style list items on hover */
 li:hover {
   background-color: #f0f0f0; /* Change background color on hover */
+}
+.sidebar {
+  background-color: #f1f1f1;
+  width: 100%;
+  height: auto;
+  position: relative;
 }

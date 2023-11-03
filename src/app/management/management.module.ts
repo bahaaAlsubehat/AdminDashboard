@@ -13,11 +13,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon'
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { AddCategoryComponent } from './CategoryManage/add-category/add-category.component';
+import { ViewCategoriesComponent } from './CategoryManage/view-categories/view-categories.component';
 
 @NgModule({
   declarations: [
     AddingredientComponent,
-    ViewingredientComponent
+    ViewingredientComponent,
+    AddCategoryComponent,
+    ViewCategoriesComponent
   ],
   imports: [
     CommonModule,
