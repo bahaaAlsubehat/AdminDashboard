@@ -20,26 +20,26 @@
                 <div class="div">
                     <mat-form-field class="example-full-width">
                         <mat-label>Ingredient Name Arabic</mat-label>
-                        <input matInput type="text" placeholder="مثال. لحم" class="inputcss">
+                        <input matInput type="text" placeholder="مثال. لحم" class="inputcss" name="ingname" [(ngModel)]="ingname">
                       </mat-form-field>
                 </div>
                 <div class="div">
                     <mat-form-field class="example-full-width">
                         <mat-label>Ingredient Description English</mat-label>
-                        <input matInput type="text" placeholder="Ex. Beef Fateel Meat" class="inputcss">
+                        <input matInput type="text" placeholder="Ex. Beef Fateel Meat" class="inputcss" name="ingnamear" [(ngModel)]="ingnamear">
                       </mat-form-field>
                       
                 </div>
                 <div class="div">
                     <mat-form-field class="example-full-width">
                         <mat-label>Ingredient Description Arabic</mat-label>
-                        <input matInput type="text" placeholder="مثال. لحم فتيل بقري" class="inputcss">
+                        <input matInput type="text" placeholder="مثال. لحم فتيل بقري" class="inputcss" name="ingdescription" [(ngModel)]="ingdescription">
                       </mat-form-field>
                 </div>
                 <div class="div">
                     <mat-form-field class="example-full-width">
                         <mat-label>Unit</mat-label>
-                        <input matInput type="text" placeholder="Ex.gm or ml" class="inputcss">
+                        <input matInput type="text" placeholder="Ex.gm or ml" class="inputcss" name="ingdescriptionar" [(ngModel)]="ingdescriptionar">
                       </mat-form-field>
                 </div>
                 <div class="div">
@@ -47,11 +47,11 @@
                 </div>
                 <div class="div">
                     <section class="example-section">
-                        <mat-checkbox class="example-margin">Is Active!</mat-checkbox>
+                        <mat-checkbox class="example-margin" name="isactive" [(ngModel)]="isactive">Is Active!</mat-checkbox>
                       </section>
                 </div>
                 <div class="div">
-                  <button type="submit" mat-raised-button color="primary">Submit</button>
+                  <button type="submit" mat-raised-button color="primary" (click)="Createingredient()">Submit</button>
                 </div>
             </form>
         </mat-card-content>

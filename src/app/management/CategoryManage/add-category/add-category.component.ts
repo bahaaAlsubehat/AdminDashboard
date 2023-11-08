@@ -10,6 +10,9 @@ import { ToastrService } from 'ngx-toastr';
 export class AddCategoryComponent   implements OnInit {
   constructor(private spinner: NgxSpinnerService ,private toastr: ToastrService) {}
 
+  
+
+
   ngOnInit() {
     /** spinner starts on init */
     this.spinner.show();
@@ -21,6 +24,9 @@ export class AddCategoryComponent   implements OnInit {
         timeOut: 3000,
       });
     },3000);
-    
   }
+
+  
 }
+
+

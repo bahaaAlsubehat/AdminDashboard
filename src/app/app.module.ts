@@ -23,6 +23,7 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-    ScrollingModule
+    ScrollingModule,
+    HttpClientModule
      
   
 
