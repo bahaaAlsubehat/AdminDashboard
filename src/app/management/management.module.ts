@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon'
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { AddCategoryComponent } from './CategoryManage/add-category/add-category.component';
 import { ViewCategoriesComponent } from './CategoryManage/view-categories/view-categories.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ViewCategoriesComponent } from './CategoryManage/view-categories/view-c
     MatButtonModule,
     MatTableModule,
     MatIconModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    NgxPaginationModule
 
   ]
 })

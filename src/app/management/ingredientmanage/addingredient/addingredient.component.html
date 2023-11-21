@@ -14,32 +14,32 @@
                 <div class="div">
                     <mat-form-field class="example-full-width">
                         <mat-label>Ingredient Name English</mat-label>
-                        <input matInput type="text" placeholder="Ex. Meat" class="inputcss" pattern="Should br less than 50 Charachter">
+                        <input matInput type="text" placeholder="Ex. Meat" class="inputcss" name="ingname" [(ngModel)]="ingname">
                       </mat-form-field>
                 </div>
                 <div class="div">
                     <mat-form-field class="example-full-width">
                         <mat-label>Ingredient Name Arabic</mat-label>
-                        <input matInput type="text" placeholder="مثال. لحم" class="inputcss" name="ingname" [(ngModel)]="ingname">
+                        <input matInput type="text" placeholder="مثال. لحم" class="inputcss" name="ingnamear" [(ngModel)]="ingnamear">
                       </mat-form-field>
                 </div>
                 <div class="div">
                     <mat-form-field class="example-full-width">
                         <mat-label>Ingredient Description English</mat-label>
-                        <input matInput type="text" placeholder="Ex. Beef Fateel Meat" class="inputcss" name="ingnamear" [(ngModel)]="ingnamear">
+                        <input matInput type="text" placeholder="Ex. Beef Fateel Meat" class="inputcss" name="ingdescription" [(ngModel)]="ingdescription">
                       </mat-form-field>
                       
                 </div>
                 <div class="div">
                     <mat-form-field class="example-full-width">
                         <mat-label>Ingredient Description Arabic</mat-label>
-                        <input matInput type="text" placeholder="مثال. لحم فتيل بقري" class="inputcss" name="ingdescription" [(ngModel)]="ingdescription">
+                        <input matInput type="text" placeholder="مثال. لحم فتيل بقري" class="inputcss" name="ingdescriptionar" [(ngModel)]="ingdescriptionar">
                       </mat-form-field>
                 </div>
                 <div class="div">
                     <mat-form-field class="example-full-width">
                         <mat-label>Unit</mat-label>
-                        <input matInput type="text" placeholder="Ex.gm or ml" class="inputcss" name="ingdescriptionar" [(ngModel)]="ingdescriptionar">
+                        <input matInput type="text" placeholder="Ex.gm or ml" class="inputcss" name="unit" [(ngModel)]="unit">
                       </mat-form-field>
                 </div>
                 <div class="div">

@@ -23,13 +23,13 @@
             </tr>
           </thead>
           <tbody>
-            <ng-container *ngFor="let row of data">
+            <ng-container *ngFor="let row of ingdata  | paginate: { itemsPerPage: pagesize, currentPage: pagenumber }">
               <tr>
-                <td>{{ row.id }}</td>
-                <td>{{ row.name }}</td>
-                <td>{{ row.email }}</td>
-                <td>{{ row.email }}</td>
-                <td>{{ row.email }}</td>
+                <td>{{ row.ingredientId }}</td>
+                <td>{{ row.ingredientName }}</td>
+                <td>{{ row.ingredientNameAr }}</td>
+                <td>{{ row.ingredientDecreption }}</td>
+                <td>{{ row.ingredientDecreptionAr }}</td>
                 <td (click)="row.isExpand = !row.isExpand">
                   <i *ngIf="!row.isExpand" class="bi-chevron-right"></i>
                   <i *ngIf="row.isExpand" class="bi-chevron-up"></i>
@@ -40,14 +40,14 @@
                   <table class="table table-sm">
                     <thead>
                       <th>Unit</th>
+                      <th>Imag ID</th>
                       <th>IsActive</th>
-                      <th>Imag URL</th>
                     </thead>
                     <tbody>
-                      <tr *ngFor="let row2 of row.address">
-                        <td>{{ row2.add1 }}</td>
-                        <td>{{ row2.add2 }}</td>
-                        <td>{{ row2.add3 }}</td>
+                      <tr *ngFor="let row2 of row.expand">
+                        <td>{{ row2.unit }}</td>
+                        <td>{{ row2.imageId}}</td>
+                        <td>{{ row2.isActive }}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -56,10 +56,15 @@
             </ng-container>
           </tbody>
         </table>
+      </div>
+      </div>
 
+      <div class="d-flex justify-content-center">
+        <pagination-controls
+          (pageChange)="renderPage($event)"
+        ></pagination-controls>
       </div>
-      </div>
-      <mat-paginator [length]="100"
+      <!--<mat-paginator [length]="100"
               [pageSize]="10"
               [pageSizeOptions]="[5, 10, 25, 100]"
               [showFirstLastButtons]="true"

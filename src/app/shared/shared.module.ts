@@ -9,6 +9,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { RouterModule } from '@angular/router';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -34,6 +35,7 @@ import { RouterModule } from '@angular/router';
     NgxSpinnerModule,
     ToastrModule,
     FormsModule,
+    NgxPaginationModule
 
 
 

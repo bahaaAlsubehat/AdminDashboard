@@ -44,18 +44,19 @@ export class AddingredientComponent {
     "isactive": this.isactive
     }
     
-    this.backend.getingredients(requesting).subscribe((res => {
+    this.backend.addingredients(requesting).subscribe((res => {
       let obj = JSON.parse(JSON.stringify(res))
-
-      if(obj.AddingredientComponent== 200){
-			  this.toastr.success("Welcom in Store")
-        this.route.navigate(["viewingredients"])
-	   
-			}
-			else{
-				this.toastr.error('Please Register','Major Error',{timeOut : 3000 });
-			}
+     // window.location.reload();
 		   
     }))
+   /* if(this.obj.AddingredientComponent== 200){
+      this.toastr.success("Welcom in Store")
+      this.route.navigate(['viewingredients'])
+    
+    }
+    else{
+      this.toastr.error('Please Register','Major Error',{timeOut : 3000 });
+    }*/
+    this.route.navigate(['/management/viewingredients'])
   }
 }
